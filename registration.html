@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -60,7 +59,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index1.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -78,29 +77,54 @@
   <div class="row">
     <div class="form_bg">
 			<form method="post" action="SaveServlet1">
-			<h2 class="text-center">Login Page</h2>
+			<h2 class="text-center">Welcome to Sign Up Page</h2>
+      <h4 class="text-center" style="color:blue;">Please fill in the following fields and click on sign up!</h4>
                 <br/>
                 <div class="form-group">
-                	<label for="userID">User ID</label>
-                    <input style="width:50%;margin:auto;" type="text" class="form-control" id="userId" name="user" placeholder="User ID">
+                	<label for="lockID">Lock ID</label>
+                  <input style="width:50%;margin:auto;" type="text" class="form-control" name="lockId" placeholder="lockId" required>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input style="width:50%;margin:auto;" type="text" class="form-control" name="firstName" placeholder="First Name" required>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input style="width:50%;margin:auto;" type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="userID">User ID</label>
+                  <input style="width:50%;margin:auto;" type="text" class="form-control" name="userId" placeholder="User ID" required>
                 </div>
                 <br/>
                 <div class="form-group">
                 	<label for="pwd">Password</label>
-                    <input style="width:50%;margin:auto;" type="password" class="form-control" name="pass" placeholder="password">
+                    <input style="width:50%;margin:auto;" type="password" class="form-control" name="pass" placeholder="password" required>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="vehicleNo">Vehicle No.</label>
+                  <input style="width:50%;margin:auto;" type="text" class="form-control" name="vehicleNo" placeholder="Vehicle Number" required>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="phoneNo">Phone No.</label>
+                  <input style="width:50%;margin:auto;" type="number" class="form-control" name="phoneNo" placeholder="Phone Number" required>
+                </div>
+                <br/>
+                <div class="form-group">
+                  <label for="emailId">Email Id</label>
+                  <input style="width:50%;margin:auto;" type="email" class="form-control" name="emailId" placeholder="Email Id" required>
                 </div>
                 <br/>
                 <div class="align-center">
-                <a href="welcomeUser.html"><button type="submit" onclick="userInfo()" style="width:25%;" class="btn btn-success" id="login" value="LOGIN">LOGIN</button></a>
-                </div>
-                <br/>
-                <div class="align-center">
-                    <a href="forgotPassword.html">Forgot Password</a>
+                <button type="submit" style="width:25%;" class="btn btn-success" id="login" value="SUBMIT">SUBMIT</button>
                 </div>
 				<br/>
-                <div class="align-center">
-                    <a href="registration.html">New Registration! Sign Up here</a>
-                </div>
+                
 			</form>
  		</div>
   </div>

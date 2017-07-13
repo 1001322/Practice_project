@@ -67,6 +67,7 @@
         <li><a href="index1.html"><span class="glyphicon glyphicon-log-in">login</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Help</a></li>
+        <li><a href="index.html">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -75,32 +76,21 @@
     <div class="jumbotron">   
          <h2>Auxino</h2><br>
     </div>
+    <div id="welcomeUser"></div>
   <div class="row">
     <div class="form_bg">
 			<form method="post" action="SaveServlet1">
-			<h2 class="text-center">Login Page</h2>
+			<h2 class="text-center">Welcome</h2>
                 <br/>
                 <div class="form-group">
-                	<label for="userID">User ID</label>
-                    <input style="width:50%;margin:auto;" type="text" class="form-control" id="userId" name="user" placeholder="User ID">
-                </div>
-                <br/>
-                <div class="form-group">
-                	<label for="pwd">Password</label>
-                    <input style="width:50%;margin:auto;" type="password" class="form-control" name="pass" placeholder="password">
+                	<label for="lockID">ENTER LOCK ID </label>
+                    <input style="width:50%;margin:auto;" type="text" class="form-control" name="lockId" placeholder="Lock ID">
                 </div>
                 <br/>
                 <div class="align-center">
-                <a href="welcomeUser.html"><button type="submit" onclick="userInfo()" style="width:25%;" class="btn btn-success" id="login" value="LOGIN">LOGIN</button></a>
+                <button type="submit" style="width:25%;" class="btn btn-success" id="login" value="GET CODE">GET CODE</button>
                 </div>
                 <br/>
-                <div class="align-center">
-                    <a href="forgotPassword.html">Forgot Password</a>
-                </div>
-				<br/>
-                <div class="align-center">
-                    <a href="registration.html">New Registration! Sign Up here</a>
-                </div>
 			</form>
  		</div>
   </div>
@@ -141,5 +131,28 @@ PASSWORD <input type ="password" name = "pass"/><br>
 <br>
 <a href = "registration.html" > SIGN UP</a>
 </form> -->
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AIO</title>
+<h2>AIO</h2>
+<h3>WELCOME USER</h3>
+</head>
+<body>
+<form method="post" action="WelcomeServlet">
+ENTER LOCK ID <input type ="text" name = "lockId"/><br>
+<br>
+<input type = "Submit" value="GET CODE"><br>
+<br>
+</form>
 </body>
 </html>
