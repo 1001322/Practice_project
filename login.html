@@ -7,8 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .body{
+    	background-color: #b3edff;
+    }
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -45,6 +49,7 @@
     }
   }
   </style>
+  
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -55,7 +60,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Auxino logo</a>
+      <a class="navbar-brand" href="#">Auxinno logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -71,93 +76,44 @@
     </div>
   </div>
 </nav>
-<div class="container-fluid text-center">
+<div class="container-fluid text-center"> 
     <div class="jumbotron">   
          <h2>Auxinno</h2><br>
     </div>
   <div class="row">
     <div class="form_bg">
-			<form class="form-horizontal" name="registartionForm" method="post" action="SaveServlet1" onsubmit="return validate()">
-			<h2 class="text-center">Welcome to Sign Up Page</h2>
-      <h4 class="text-center" style="color:blue;">Please fill in the following fields and click on sign up!</h4>
+			<form class="form-horizontal" name="loginForm" method="post" action="SaveServlet1">
+			<h2 class="text-center">Login Page</h2>
                 <br/>
                 <div class="form-group">
                 <div class="col-sm-2"></div>
-                	<label class="control-label col-sm-2" for="lockID">Lock ID:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="text" class="form-control" name="lockId" placeholder="lockId" required>
-                  <span id="spanLock"></span>
-                  </div>
-                </div>
-                <br/>
-                <div class="form-group">
-                <div class="col-sm-2"></div>
-                  <label class="control-label col-sm-2" for="firstName">First Name:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="text" class="form-control" name="firstName" placeholder="First Name" required>
-                  <span id="spanFirstName"></span>
-                  </div>
-                </div>
-                <br/>
-                <div class="form-group">
-                <div class="col-sm-2"></div>
-                  <label class="control-label col-sm-2" for="lastName">Last Name:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="text" class="form-control" name="lastName" placeholder="Last Name" required>
-                  <span id="spanLastName"></span>
-                  </div>
-                </div>
-                <br/>
-                <div class="form-group">
-                <div class="col-sm-2"></div>
-                  <label class="control-label col-sm-2" for="userID">User ID:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="text" class="form-control" name="userId" placeholder="User ID" required>
-                  <span id="spanUserId"></span>
-                  </div>
-                </div>
+                	<label class="control-label col-sm-2" for="userID">User ID:</label>
+                	<div class="col-sm-8">
+                    <input  style="width:50%;" type="text" class="form-control" id="userId" name="user" placeholder="User ID">
+                    <span id="spanUser"></span>
+                    </div>
+                </div
                 <br/>
                 <div class="form-group">
                 <div class="col-sm-2"></div>
                 	<label class="control-label col-sm-2" for="pwd">Password:</label>
-                  <div class="col-sm-8">
-                    <input style="width:50%;" type="password" class="form-control" name="pass" placeholder="password" required>
+                	<div class="col-sm-8">
+                    <input  style="width:50%;" type="password" id="password" class="form-control" name="pass" placeholder="password">
                     <span id="spanPass"></span>
                     </div>
                 </div>
                 <br/>
-                <div class="form-group">
-                <div class="col-sm-2"></div>
-                  <label class="control-label col-sm-2" for="vehicleNo">Vehicle No.:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="text" class="form-control" name="vehicleNo" placeholder="Vehicle Number" required>
-                  <span id="spanVehicleNo"></span>
-                  </div>
-                </div>
-                <br/>
-                <div class="form-group">
-                <div class="col-sm-2"></div>
-                  <label class="control-label col-sm-2" for="phoneNo">Phone No.:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="number" class="form-control" name="phoneNo" placeholder="Phone Number" required>
-                  <span id="spanPhoneNo"></span>
-                  </div>
-                </div>
-                <br/>
-                <div class="form-group">
-                <div class="col-sm-2"></div>
-                  <label class="control-label col-sm-2" for="emailId">Email Id:</label>
-                  <div class="col-sm-8">
-                  <input style="width:50%;" type="email" class="form-control" name="emailId" placeholder="Email Id" required>
-                  <span id="spanEmail"></span>
-                  </div>
+                <div class="align-center">
+                <a href="welcomeUser.html"><button type="button" onclick="return validate()" style="width:25%;" class="btn btn-success" id="login" value="LOGIN">LOGIN</button></a>
                 </div>
                 <br/>
                 <div class="align-center">
-                <button type="button" style="width:25%;" class="btn btn-success" id="login" value="SUBMIT">SUBMIT</button>
+                    <a href="forgotPassword.html">Forgot Password</a>
                 </div>
 				<br/>
-                
+                <div class="align-center">
+                    <a href="registration.html">New Registration! Sign Up here</a>
+                </div>
 			</form>
  		</div>
   </div>
@@ -190,20 +146,20 @@
   <p>&copy All Rights Reserved by auxinno </p>
 </footer>
 <script>
-    
+  	
 function validate()   
 {   
-  var password = document.forms["registrationForm"]["pass"].value;
-  var username = document.forms["registartionForm"]["user"].value;
+	var password = document.forms["loginForm"]["pass"].value;
+	var username = document.forms["loginForm"]["user"].value;
 var passw = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;  
 if(username==null || username==""){
-  document.getElementById("spanUser").innerHTML = "please enter the username";
-  return false;
+	document.getElementById("spanUser").innerHTML = "please enter the username";
+	return false;
 }
 else if(password==null || password==""){
-  document.getElementById("spanPass").innerHTML = "please enter the password";  
-  return false;
-  //alert("Please enter the password");
+	document.getElementById("spanPass").innerHTML = "please enter the password";	
+	return false;
+	//alert("Please enter the password");
 }
 else if(!password.match(passw))   
 {     
@@ -212,8 +168,9 @@ return false;
 } 
 else
 {
-  return true;
+	return true;
 } 
 }  
   </script>
+</body>
 </html>
